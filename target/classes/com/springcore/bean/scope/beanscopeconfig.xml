@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/p
+                           http://www.springframework.org/schema/p/spring-p.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+	<context:component-scan
+		base-package="com.springcore.bean.scope"></context:component-scan>
+
+
+	<!-- standalone collection list -->
+	<util:list list-class="java.util.ArrayList" id="address">
+		<value>Pune</value>
+		<value>Mumbai</value>
+		<value>Banglore</value>
+	</util:list>
+
+	<!-- standalone collection Set -->
+	<util:set set-class="java.util.HashSet" id="courses">
+	<value>Java</value>
+	<value>Python</value>
+	<value>ReactJs</value>
+	<value>Java</value>
+	</util:set>
+
+
+
+	<!-- standalone collection map -->
+	<util:map map-class="java.util.HashMap" id="feesStructure">
+		<entry key="advace Java" value="7500" />
+		<entry key="Python" value="5000" />
+		<entry key="Spring Boot" value="10000" />
+	</util:map>
+
+	<bean class="com.springcore.bean.scope.PrototypeXml"
+		name="prototype1" scope="prototype" />
+
+
+</beans>

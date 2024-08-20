@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/p
+                           http://www.springframework.org/schema/p/spring-p.xsd">
+   
+   
+    <bean class="com.springcore.collections.Customer" name="customer">
+    <property name="customerId" value="1557" />
+    <property name="customerName" value="Shrikant" />
+    
+    <property name="order">
+    <list>
+    <value>Pizza</value>
+    <value>Burger</value>
+    <value>SandWitch</value>
+    </list>
+    </property>
+    
+    
+    <property name="emailId">
+    <set>
+    <value>shrikant7757@gmail.com</value>
+    <value>shital7757@gmail.com</value>
+    <value>shrisurve7757@gmail.com</value>
+    </set>
+    </property>
+    
+    <property name="phones">
+    <list>
+    <value>7796277757</value>
+    <value>9765277757</value>
+    <value>9757277757</value>
+    </list>
+    </property>
+    
+    
+    <property name="price">
+    <map>
+    <entry key="Pizza" value="450" />
+    <entry key="Burger" value="300" />
+    <entry key="SandWitch" value="150" />
+    </map>
+    </property>
+    
+    
+    
+    </bean>
+   
+   
+                           
+                           
+   </beans>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/p
+                           http://www.springframework.org/schema/p/spring-p.xsd">
+
+
+	<bean class="com.springcore.ref.Bank" name="bankref">
+		<property name="bankName" value="Maharashtra"/>
+		<property name="bankCode" value="6546"/>
+		<property name="ifcCode" value="MAH0003"/>
+		<property name="branchName" value="Narhe"/>
+	</bean>
+
+	<bean class="com.springcore.ref.Customer" name="customerref">
+		<property name="name" value="Shrikant Surve"/>
+		<property name="accountNo" value="6002401222"/>
+
+		<property name="obj">
+			<ref bean="bankref"/>
+		</property>
+
+	</bean>
+</beans>
